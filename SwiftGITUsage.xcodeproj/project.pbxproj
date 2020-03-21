@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FE5EFFDB24263450009EF891 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5EFFDA24263450009EF891 /* main.swift */; };
+		FEAD664224263DC500FA8E32 /* SwiftGit2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEAD664124263DC500FA8E32 /* SwiftGit2.framework */; };
+		FEAD664324263DC500FA8E32 /* SwiftGit2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FEAD664124263DC500FA8E32 /* SwiftGit2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +22,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		FEAD664424263DC500FA8E32 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FEAD664324263DC500FA8E32 /* SwiftGit2.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FE5EFFD724263450009EF891 /* SwiftGITUsage */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftGITUsage; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5EFFDA24263450009EF891 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FEAD664124263DC500FA8E32 /* SwiftGit2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGit2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEAD66452426526500FA8E32 /* SwiftGITUsage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftGITUsage.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEAD664224263DC500FA8E32 /* SwiftGit2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +59,7 @@
 			children = (
 				FE5EFFD924263450009EF891 /* SwiftGITUsage */,
 				FE5EFFD824263450009EF891 /* Products */,
+				FEAD664024263DC500FA8E32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +74,18 @@
 		FE5EFFD924263450009EF891 /* SwiftGITUsage */ = {
 			isa = PBXGroup;
 			children = (
+				FEAD66452426526500FA8E32 /* SwiftGITUsage.entitlements */,
 				FE5EFFDA24263450009EF891 /* main.swift */,
 			);
 			path = SwiftGITUsage;
+			sourceTree = "<group>";
+		};
+		FEAD664024263DC500FA8E32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEAD664124263DC500FA8E32 /* SwiftGit2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +98,7 @@
 				FE5EFFD324263450009EF891 /* Sources */,
 				FE5EFFD424263450009EF891 /* Frameworks */,
 				FE5EFFD524263450009EF891 /* CopyFiles */,
+				FEAD664424263DC500FA8E32 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +270,7 @@
 		FE5EFFDF24263450009EF891 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SwiftGITUsage/SwiftGITUsage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3KRK236DU7;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -254,6 +282,7 @@
 		FE5EFFE024263450009EF891 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SwiftGITUsage/SwiftGITUsage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3KRK236DU7;
 				ENABLE_HARDENED_RUNTIME = YES;
